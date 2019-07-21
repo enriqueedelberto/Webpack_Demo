@@ -1,14 +1,14 @@
 import '../css/index.css';
-import text from './text';
-//lets add elements dinamically
+import search from './search';
+import render from './render';
 
-text();
+const id = prompt('Who the hell that pokemon is');
 
-
-if (module.hot) {
-    module.hot.accept('./text.js', function() {
-        console.log('reload in runtime');
-        text();
+search(id)
+    .then((data) => {
+        console.log(data);
+        render(data);
+    })
+    .catch(() => {
+        console.log('Pokemon was not found');
     });
-
-}
