@@ -14,25 +14,22 @@ module.exports = {
     },
     devServer: {
         hot: true,
+        open: true,
+        port: 9000,
     },
     module: {
         rules: [{
             test: /\.css$/,
-            use: [{
-                    loader: MiniCssExtractPlugin.loader
-                },
+            use: [
+                'style-loader',
                 'css-loader'
-
             ]
         }]
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new HTMLWebPackPlugin({
-            title: 'Plugins'
-        }),
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].css'
+            title: 'Webpack server'
         })
     ]
 
