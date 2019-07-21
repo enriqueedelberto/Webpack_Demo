@@ -1,0 +1,19 @@
+{
+    "name": "webpack_04",
+    "version": "1.0.0",
+    "description": "test webpack",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack"
+    },
+    "keywords": [
+        "webpack"
+    ],
+    "author": "Enrique Edelberto",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "webpack": "4.36.1",
+        "webpack-cli": "3.3.6"
+    }
+}
