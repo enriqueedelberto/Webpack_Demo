@@ -1,5 +1,14 @@
 import '../css/index.css';
-
+import text from './text';
 //lets add elements dinamically
-document.body.innerHTML = 'Hello world styles and stuff from Webpack...';
-console.log('Heello world');
+
+text();
+
+
+if (module.hot) {
+    module.hot.accept('./text.js', function() {
+        console.log('reload in runtime');
+        text();
+    });
+
+}
